@@ -1526,7 +1526,7 @@ const MonthlyOpsReport = ({scenario}) => {
 };
 
 // ── Report: Treating clinician Performance ───────────────────────────────────────────────
-const Treating clinicianReport = ({scenario}) => {
+const TreatingClinicianReport = ({scenario}) => {
   const highlighted = scenario.providers.find(p=>p.highlight) || scenario.providers[0];
   const rate = parseFloat(highlighted.rate);
 
@@ -1897,7 +1897,7 @@ const ReportsView = ({scenario}) => {
         ))}
       </div>
       {activeReport==='monthly'  && <MonthlyOpsReport scenario={scenario}/>}
-      {activeReport==='bcba'     && <Treating clinicianReport scenario={scenario}/>}
+      {activeReport==='bcba'     && <TreatingClinicianReport scenario={scenario}/>}
       {activeReport==='payer'    && <PayerIntelReport scenario={scenario}/>}
     </div>
   );
